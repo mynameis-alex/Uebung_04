@@ -11,12 +11,14 @@ Interface:
 -> in zwei Achsen (vor/zurück, links/rechts)
 -> sitzend auf drehbaren Stuhl
 
-- Initiale Position speichern
--> Richtungsvektor berechnen zwischen aktueller Position und initialer Position
-  -> Richtungsvektor-y auf initiale Höhe setzen, damit die Höhe immer gleich bleibt
-  -> alte Position + (Richtungsvektor * Beschleunigungsfaktor der Transferfunktion) = neue Position
-  -> wir bewegen das Museum statt uns, damit wir die initiale Position nicht neu berechnen müssen
-    -> Werte müssen umgekehrt werden
+TO DO
+- Controller sperren, sodass damit nicht navigiert werden kann
+- smoothe Transferfunktion
+  + Deadzone zu Beginn, wirkt auch wie Threshold, damit man nie perfekt auf (0, 0, 0) muss
+  + maximaler Ausschlag
+- Objekte + Wände platzieren
+- Readme schreiben
+- Erweiterung: mehrere Räume, die man via Teleportation erreichen kann
 
 
 
