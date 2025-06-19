@@ -13,7 +13,7 @@ Interface:
 
 TO DO
 - Controller sperren, sodass damit nicht navigiert werden kann
-- Objekte + Wände platzieren
+- Objekte platzieren, Materials verwenden
 - Readme schreiben
 - Erweiterung: mehrere Räume, die man via Teleportation erreichen kann
 
