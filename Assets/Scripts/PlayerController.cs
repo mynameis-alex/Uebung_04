@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -11,7 +12,11 @@ public class PlayerController : MonoBehaviour
     public GameObject camera;
 
     //Initial Position
-    Vector3 initialPosition;
+    private Vector3 initialPosition;
+
+    //Thresholds
+    private float deadzone = 0.005f;
+    private float maximum = 0.3f;
 
 
 
@@ -27,10 +32,21 @@ public class PlayerController : MonoBehaviour
         Vector3 directionVector = camera.transform.position - initialPosition;
         directionVector.y = initialPosition.y; //keep height the same
 
+        //set to zero if distance is below 0.1
+        directionVector.x = (Math.Abs(directionVector.x) < deadzone) ? 0 : directionVector.x;
+        directionVector.z = (Math.Abs(directionVector.z) < deadzone) ? 0 : directionVector.z;
+
+        //cut when maximum is reached
+        directionVector.x = (Math.Abs(directionVector.x) > maximum)
+                    ? (directionVector.x < 0) ? 0 - maximum : maximum //maximum is negative when directionVector.x is negative
+                    : directionVector.x;
+        directionVector.z = (Math.Abs(directionVector.z) > maximum)
+                    ? (directionVector.z < 0) ? 0 - maximum : maximum
+                    : directionVector.z;
 
         //transfer function (for smoother transition we use an exponential function instead of linear)
-        float distanceX = directionVector.x * directionVector.x * directionVector.x / 20;
-        float distanceZ = directionVector.z * directionVector.z * directionVector.z / 20;
+        float distanceX = directionVector.x * directionVector.x * directionVector.x / 2;
+        float distanceZ = directionVector.z * directionVector.z * directionVector.z / 2;
 
         //move world in other direction to simulate movement in the direction where user leans into
         Vector3 newPos = new Vector3(
