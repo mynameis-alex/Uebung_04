@@ -12,7 +12,6 @@ Interface:
 -> sitzend auf drehbaren Stuhl
 
 TO DO
-- Kollision erkennen und blocken
 - Objekte platzieren, Materials verwenden
 - Readme schreiben
 - Erweiterung: mehrere Räume, die man via Teleportation erreichen kann

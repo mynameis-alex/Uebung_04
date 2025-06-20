@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 10328
+  controlID: 91
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 10329
+  controlID: 51
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 10330
+  controlID: 42
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -245,14 +245,14 @@ MonoBehaviour:
     y: 424
     width: 1172.8
     height: 292.8
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -774,9 +774,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 12.670442, y: -6.5375133, z: 20.355976}
+    m_Target: {x: -14.172209, y: -22.195606, z: 0.938256}
     speed: 2
-    m_Value: {x: 12.670442, y: -6.5375133, z: 20.355976}
+    m_Value: {x: -14.172209, y: -22.195606, z: 0.938256}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -822,9 +822,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15599032, y: -0.2884833, z: 0.04765415, w: -0.94367373}
+    m_Target: {x: -0.34758365, y: 0.62507755, z: -0.36412066, w: -0.5968548}
     speed: 2
-    m_Value: {x: -0.1559903, y: -0.2884833, z: 0.04765415, w: -0.9436737}
+    m_Value: {x: -0.34758365, y: 0.62507755, z: -0.36412066, w: -0.5968548}
   m_Size:
     m_Target: 15.297794
     speed: 2
@@ -903,7 +903,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6c37ffff8437ffff283dffff1658ffff2e58ffffd25dffff0c6effffa07affffa87effffce7effffd87efffffc7effff287fffff2e7fffff547fffff6c7fffff767fffff7e7fffff8a7fffff947fffffb87fffffe47fffffea7fffff1080ffff2880ffff3280ffff3a80ffff4680ffff6880ffff7680ffff26a2ffff3ea2ffffe2a7fffff4d1ffff0cd2ffffb0d7ffff1afbffffccda000088db0000b6f70000b0f80000d8fa0000820a0100de0b0100141b0100
+      m_ExpandedIDs: 4cd9ffff64d9ffff08dfffff1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 448
+    y: 503.2
     width: 1171.8
     height: 266.8
   m_SerializedDataModeController:
@@ -992,8 +992,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14c90000
-    m_LastClickedID: 51476
+    m_SelectedIDs: aaa90000
+    m_LastClickedID: 43434
     m_ExpandedIDs: 000000001aa600001ca60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 503.2
+    y: 448
     width: 1171.8
     height: 266.8
   m_SerializedDataModeController:
@@ -1248,7 +1248,7 @@ MonoBehaviour:
       y: 21
       width: 880.4
       height: 377
-    m_Scale: {x: 1.25, y: 1.25}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 440.2, y: 188.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1256,10 +1256,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -352.16
-      y: -150.8
-      width: 704.32
-      height: 301.6
+      x: -440.2
+      y: -188.5
+      width: 880.4
+      height: 377
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1100.5, y: 497.5}
