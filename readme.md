@@ -16,6 +16,14 @@ TO DO
 - Readme schreiben
 - Erweiterung: mehrere Räume, die man via Teleportation erreichen kann
 
+How to: Objekte platzieren
+- Erstelle ein Objekt
+- Verwende für das Objekt einen Collider (meist: Box/Capsule)
+  + aktiviere "isTrigger"
+  + vergrößere den Collider, sodass er (deutlich) über das Objekt hinausragt
+- Sollte deine Figur aus mehreren Objekten bestehen, füge dem Eltern-Element einen Collider hinzu
+  + entferne den Collider von allen Kindern
+
 
 
 ## Bewertung des Interfaces (Aufgabenteil B)
