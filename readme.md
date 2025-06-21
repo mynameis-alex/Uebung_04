@@ -11,10 +11,13 @@ Interface:
 -> in zwei Achsen (vor/zurück, links/rechts)
 -> sitzend auf drehbaren Stuhl
 
+
+
 TO DO
-- Objekte platzieren, Materials verwenden
+- weitere Objekte platzieren
 - Readme schreiben
-- Erweiterung: mehrere Räume, die man via Teleportation erreichen kann
+- Erweiterung: mehrere Räume, die man via Teleportation erreichen kann (=> Interaktion)
+- Erweiterung: Sound, wenn man gegen etwas läuft ("Aua" für Feedback)
 
 How to: Objekte platzieren
 - Erstelle ein Objekt

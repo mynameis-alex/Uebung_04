@@ -1,6 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.XR.Management;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     //Initial Position
     private Vector3 initialPosition;
+    private Boolean isInitialized;
 
     //Thresholds
     private float deadzone = 0.005f;
@@ -23,13 +25,23 @@ public class PlayerController : MonoBehaviour
 
 
 
-    void Start()
+    IEnumerator Start()
     {
+        //wait until xr-system is initialized
+        yield return new WaitUntil(() => XRGeneralSettings.Instance.Manager.isInitializationComplete);
+        yield return new WaitForSeconds(0.5f); //additional waiting time
+        //save position
         initialPosition = camera.gameObject.transform.position;
+        isInitialized = true;
     }
 
     void Update()
     {
+
+        if (isInitialized == false)
+        {
+            return;
+        }
 
         //direction vector between initialPos and cameraPos
         Vector3 directionVector = camera.transform.position - initialPosition;
@@ -48,15 +60,15 @@ public class PlayerController : MonoBehaviour
 
         //cut when maximum is reached
         directionVector.x = (Math.Abs(directionVector.x) > maximum)
-                    ? (directionVector.x < 0) ? 0 - maximum : maximum //maximum is negative when directionVector.x is negative
-                    : directionVector.x;
+        ? (directionVector.x < 0) ? 0 - maximum : maximum //maximum is negative when directionVector.x is negative
+        : directionVector.x;
         directionVector.z = (Math.Abs(directionVector.z) > maximum)
-                    ? (directionVector.z < 0) ? 0 - maximum : maximum
-                    : directionVector.z;
+        ? (directionVector.z < 0) ? 0 - maximum : maximum
+        : directionVector.z;
 
         //transfer function (for smoother transition we use an exponential function instead of linear)
-        float distanceX = directionVector.x * directionVector.x * directionVector.x / 2;
-        float distanceZ = directionVector.z * directionVector.z * directionVector.z / 2;
+        float distanceX = directionVector.x * directionVector.x * directionVector.x / 1.8f;
+        float distanceZ = directionVector.z * directionVector.z * directionVector.z / 1.8f;
 
         //move world in other direction to simulate movement in the direction where user leans into
         Vector3 newPos = new Vector3(
